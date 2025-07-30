@@ -3,18 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  // Sample bug: undefined variable
+  // Debug state
   const [count, setCount] = useState(0);
-  const undefinedVariable = undefined; // This will cause issues
   
   // Debug function to demonstrate debugging
   const debugFunction = () => {
     console.log('Debug: Current count is', count);
-    console.log('Debug: Undefined variable is', undefinedVariable);
+    console.log('Debug: App is running successfully!');
     
-    // This will cause an error
+    // Simulate a potential error
     try {
-      console.log('Debug: Trying to access undefined property:', undefinedVariable.someProperty);
+      const testObject = { message: 'Hello from debug!' };
+      console.log('Debug: Test object:', testObject.message);
     } catch (error) {
       console.error('Debug: Caught error:', error);
     }
